@@ -10,7 +10,7 @@ sendForm = function(){
       }
 
   $.ajax({
-    url: 'http://pooleapp.com/stash/347cefc5-78dc-4d85-b789-6f40e4a8e296/',
+    url: 'http://pooleapp.com/stash/d285a8b3-8869-4c94-ab82-bfb2031dbbc5/',
     method: 'POST',
     dataType: 'json',
     data: dataHash
