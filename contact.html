@@ -78,16 +78,17 @@
 					<form role="form" id="contact_form">
 						<div class="form-group">
 							<label for="InputName">Your name</label>
-							<input type="text" class="form-control" id="InputName" placeholder="Your name">
+							<input type="text" class="form-control" id="name" name="{name}" placeholder="Your name">
 						</div>
 						<div class="form-group">
 							<label for="InputEmail">Your email</label>
-							<input type="email" class="form-control" id="InputEmail" placeholder="Your email">
+							<input type="email" class="form-control" name="{email}" id="email" placeholder="Your email">
 						</div>
 						<div class="form-group">
 							<label for="InputMesaagel">Your messsage</label>
-							<textarea class="form-control" id="Message" placeholder="Your message" rows="8"></textarea>
+							<textarea class="form-control" name="{message}" id="message" placeholder="Your message" rows="8"></textarea>
 						</div>
+						<div id="success"></div>
 						<button type="submit" class="btn btn-default btn-green">Send message</button>
 					</form>
 				</div>
