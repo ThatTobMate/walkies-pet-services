@@ -2,20 +2,20 @@
 sendForm = function(){
   // event.preventDefault
 
-  // dataHash = {
-  //   '{name}' : $('#name').val(),
-  //   '{email}' : $('#email').val(),
-  //   '{phone}' : $('#phone').val(),
-  //   '{message}' : $('#message').val()
-  //     }
+  dataHash = {
+    'name' : $('#name').val(),
+    '_sendTo' : $('#email').val(),
+    'phone' : $('#telephone').val(),
+    'message' : $('#message').val()
+  }
 
-  // $.ajax({
-  //   url: 'http://pooleapp.com/stash/d285a8b3-8869-4c94-ab82-bfb2031dbbc5/',
-  //   method: 'POST',
-  //   dataType: 'json',
-  //   data: dataHash
-  // }).always(function(){
-  //   console.log('done')
+  $.ajax({
+    url: 'https://formspree.io/lisa@walkiespetcareservices.com',
+    method: 'POST',
+    dataType: 'json',
+    data: dataHash
+  }).always(function(){
+    console.log('done')
     $('#success').html("<div class='alert alert-success'>");
     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
         .append("</button>");
@@ -24,13 +24,13 @@ sendForm = function(){
     $('#success > .alert-success')
         .append('</div>');
     $('form')[0].reset()
-  // })
+  })
 }
 
 
 $(function(){
   $('form').on('submit', function(event){
-    // event.preventDefault()
+    event.preventDefault()
     sendForm()
   })
 })
